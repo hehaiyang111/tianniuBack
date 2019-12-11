@@ -131,9 +131,9 @@
     <select id="queryWorkerSummaryByManager" resultType="cn.huihongcloud.entity.summary.SummaryEntity">
         select count(distinct device_id) deviceCount, sum(num) beetleCount, device_maintenance.username `name`, device_maintenance.username code
         from device_maintenance
-        left join device on device_maintenance.device_id = device.id
-        left join user on device_maintenance.username = user.username
-        where parent = #{manager}
+        where username in (
+					select username from user 
+					where parent = #{manager}) 
               and isactive = '0'
         
         <if test="startDate != null and startDate !=''">

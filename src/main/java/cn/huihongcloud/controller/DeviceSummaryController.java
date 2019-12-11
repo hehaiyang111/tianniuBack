@@ -129,8 +129,11 @@ public class DeviceSummaryController {
         }
         PageWrapper pageWrapper = new PageWrapper();
         pageWrapper.setTotalPage(pageObject.getPages());
+        //pageWrapper.setTotalPage(1);
         pageWrapper.setCurrentPage(page);
+        //pageWrapper.setCurrentPage(1);
         pageWrapper.setTotalNum(pageObject.getTotal());
+        //pageWrapper.setTotalNum(1000);
         pageWrapper.setData(summaryEntities);
         return Result.ok(pageWrapper);
     }

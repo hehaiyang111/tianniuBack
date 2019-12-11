@@ -3,8 +3,10 @@ package cn.huihongcloud.security.config;
 
 import cn.huihongcloud.filter.CorsFilter;
 import cn.huihongcloud.security.filter.JWTAuthenticationFilter;
+import com.beust.jcommander.internal.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -12,6 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.access.channel.ChannelProcessingFilter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 
 import java.util.List;
 
@@ -31,6 +34,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
 
     }
+
+    
+    
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

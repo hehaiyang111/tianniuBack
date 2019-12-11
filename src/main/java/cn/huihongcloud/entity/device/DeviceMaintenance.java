@@ -100,31 +100,6 @@ public class DeviceMaintenance {
         this.id = id;
     }
 
-    public String getcityname(){ return cityname;}
-
-    public void setcityname(String cityname) {
-        this.cityname = cityname;
-    }
-
-    public YearMonth getYearmonth(){ return yesrmonth;}
-
-    public void setYearmonth(YearMonth yearmonth) {
-        this.yesrmonth = yearmonth;
-    }
-
-    public Integer getYear(){ return year;}
-
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
-    public Integer getmonth(){ return month;}
-
-    public void setmonth(Integer month) {
-        this.month = month;
-    }
-
-
     public String getDeviceId() {
         return deviceId;
     }
@@ -187,6 +162,24 @@ public class DeviceMaintenance {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public YearMonth getYearmonth(){ return yesrmonth;}
+
+    public void setYearmonth(YearMonth yearmonth) {
+        this.yesrmonth = yearmonth;
+    }
+
+    public Integer getYear(){ return year;}
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public Integer getmonth(){ return month;}
+
+    public void setmonth(Integer month) {
+        this.month = month;
     }
 
     public Double getLongitude() {
@@ -293,4 +286,30 @@ public class DeviceMaintenance {
     public void setReported(Boolean reported) {
         this.reported = reported;
     }
+/*
+    public Integer getOtherType() {
+        return otherType;
+    }
+
+    public void setOtherType(Integer otherType) {
+        this.otherType = otherType;
+    }
+    public Integer getOtherNum() {
+        return otherNum;
+    }
+
+    public void setOtherNum(Integer otherNum) {
+        this.otherNum = otherNum;
+    }
+*/
+    public String getcityname(){ return cityname;}
+
+    public void setcityname(String cityname) {
+        this.cityname = cityname;
+    }
+
+
+
+
+
 }
